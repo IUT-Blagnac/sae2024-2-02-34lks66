@@ -30,13 +30,32 @@ public class Algo{
 
     public static String RLE(String in, int iteration) throws AlgoException{
         // Provide your algo here
-        return "NotYetImplemented";
+        String rle = in ; 
+        for (int i = 0 ; i < iteration ; i++) {
+            rle = RLE(rle) ; 
+        }
+        return rle ;
     }
 
     public static String unRLE(String in) throws AlgoException{
         // Provide your algo here
-        return "NotYetImplemented";
-
+        StringBuilder rle = new StringBuilder() ; 
+        int cpt ; 
+        int i = 0 ;
+        while( i < in.length()) {
+            if(Character.isDigit(in.charAt(i))) {
+                cpt = Character.getNumericValue(in.charAt(i)) ;
+                i++ ;
+                for (int j = 0 ; j < cpt ; j++) {
+                    rle.append(in.charAt(i)) ;
+                }
+                i++ ; 
+            } else {
+                rle.append(in.charAt(i)) ; 
+                i++ ;
+            }
+        }
+        return rle.toString() ;
     }
 
     public static String unRLE(String in, int iteration) throws AlgoException{
@@ -44,5 +63,25 @@ public class Algo{
         return "NotYetImplemented";
 
     }
+
+    public static String unRLE2(String in) throws AlgoException{
+        // Provide your algo here
+        StringBuffer rle = new StringBuffer() ; 
+        int cpt ; 
+         char[] tab = in.toCharArray() ;
+        for (int i = 0 ; i < in.length() ; i++) {
+            if(in.charAt(tab[i])) {
+                cpt = in.charAt(tab[i]) ;
+                while (cpt-- != 1) {
+                    rle.append(tab[i-1]) ;
+                } 
+            } else {
+                rle.append(tab[i]) ; 
+            }
+        }
+        return rle.toString() ;
+    }
+
 }
+
 
