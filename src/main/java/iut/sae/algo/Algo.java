@@ -60,8 +60,11 @@ public class Algo{
 
     public static String unRLE(String in, int iteration) throws AlgoException{
         // Provide your algo here
-        return "NotYetImplemented";
-
+        String rle = in ; 
+        for (int i = 0 ; i < iteration ; i++) {
+            rle = unRLE(rle) ; 
+        }
+        return rle ;
     }
 
     public static String unRLE2(String in) throws AlgoException{
