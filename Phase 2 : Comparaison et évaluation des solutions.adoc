@@ -41,9 +41,7 @@ Auteur : Lekesiz Mucahit
 
 Remarque Globale : Parmi les algorithmes évalués, certains ne compilaient pas en raison de l'absence des exceptions AlgoException dans les méthodes, ce qui empêchait le bon fonctionnement du code et le lancement des tests. Pour ces algorithmes, j'ai ajouté les exceptions AlgoException afin de vérifier leur bon fonctionnement, en retirant 5 points à chacun. De plus, pour tous les codes où le nom de la classe n'était pas 'Algo', j'ai enlevé 1 point. Enfin, pour les algorithmes dont le code était commenté et lisible, j'ai ajouté 1 point.
 Pour les algos de la catégorie efficacité je n'ai pas enlevé de point, ils respectaient la consigne sur les méhodes de java.util.
-
-
-== Présentation des outils d’évaluation 
+ 
 
 == Classement des Algorithmes
 
