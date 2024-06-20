@@ -1,0 +1,77 @@
+= S2.02 - Exploration algorithmique d’un problème 
+Auteur : Lekesiz Mucahit
+:toc:
+:toc-title: Sommaire
+
+== Évaluation des Algorithmes
+
+=== Evaluation des algorithmes de simplicité
+|====
+| Algorithme | Compile | Anonymat | Fonctionne | Test | Remarque | Note
+
+| 05simplicite.java | Oui | Oui | Oui | Oui |  | 18
+| 48simplicite.java | Oui | Oui | Oui | Oui |  | 18
+| 54simplicite.java | Compile seulement pour RLE
+| Oui | Retour erroné | Ne passe pas | Remarque : Les méthodes pour décompresser un caractère ne sont pas présents, unRLE(string in) et unRLE(string in, int iterations). Donc le code ne compile pas, les tests ne passent pas. Le nom de la méthode avec iterations de RLE n’est pas le même que celui initialement donnée . Sinon le code est commenté.
+ | 5
+| 26simplicite.py   | Oui | Oui | Oui | Oui |  | 18
+| 65simplicite.py   | Oui | Oui | Oui | Ne passe pas tous les tests | | 12
+|====
+
+=== Evaluation des algorithmes d'efficacité
+|====
+| Algorithme | Compile | Anonymat | Fonctionne | Test | Remarque | Note
+
+| 25efficacite.java | Oui | Oui | Oui | Passe tout les tests sauf deux test de UnRleRecursif | Code commenté. Nom de classe appelé Efficacite | 14
+| 30efficacite.java | Oui | Oui | Oui | Oui | | 18
+| 65efficacite.java | AlgoException | Oui | Fonctionne seulement pour RLE classique, exception levé pour RleRécursif | Ne passe pas | Le nom de la classe est Efficacité. Les Exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif. L’algorithme ne gère pas le cas où la chaîne est vide. L’algorithme compile et fonctionne mais ne passe pas tous les tests initalement fournis. | 7
+| 01efficacite.c   | | | | | | 
+| 34efficacite.c   | | | | | | 
+|====
+
+=== Evaluation des algorithmes de sobriété
+|====
+| Algorithme | Compile | Anonymat | Fonctionne | Test | Remarque | Note
+
+| 12sobriete.java | Oui | Oui | Oui | Oui | Le nom de la classe est Sobriete. Les exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif.  Mis à part les Exceptions l’algo fonctionne, compile et passe tous les tests fournis initialement. | 12
+| 25sobriete.java | Oui | Oui | Oui | Oui | Le nom de la classe est nommé Sobriete. Le code est lisible et commenté. L’algo compile, fonctionne et passe tous les tests initialement fournis | 18
+| 47sobriete.java | Oui | Oui | Oui | Oui| Le nom de la classe est Sobriete. Les exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif.  Mis à part les Exceptions l’algo fonctionne, compile et passe tous les tests fournis initialement. Le code est lisible et commenté| 13
+| 63sobriete.java | Oui | Oui | Oui | Oui | | 18
+|====
+
+Remarque Globale : Parmi les algorithmes évalués, certains ne compilaient pas en raison de l'absence des exceptions AlgoException dans les méthodes, ce qui empêchait le bon fonctionnement du code et le lancement des tests. Pour ces algorithmes, j'ai ajouté les exceptions AlgoException afin de vérifier leur bon fonctionnement, en retirant 5 points à chacun. De plus, pour tous les codes où le nom de la classe n'était pas 'Algo', j'ai enlevé 1 point. Enfin, pour les algorithmes dont le code était commenté et lisible, j'ai ajouté 1 point.
+Pour les algos de la catégorie efficacité je n'ai pas enlevé de point, ils respectaient la consigne sur les méhodes de java.util.
+
+== Classement des Algorithmes
+
+=== Classement par Simplicité
+[cols="1,1,1,1", options="header"]
+|===
+|Classement |Algorithme |Note |Commentaire
+|1 |||
+|2 |||
+|3 |||
+|4 |||
+|5 |||
+|===
+
+=== Classement par Efficacité
+[cols="1,1,1,1", options="header"]
+|===
+|Classement |Algorithme |Note |Commentaire
+|1 |||
+|2 |||
+|3 |||
+|4 |||
+|5 |||
+|===
+
+=== Classement par Sobriété
+[cols="1,1,1,1", options="header"]
+|===
+|Classement |Algorithme |Note |Commentaire
+|1 |||
+|2 |||
+|3 |||
+|4 |||
+|===
