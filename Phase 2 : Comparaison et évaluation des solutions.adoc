@@ -12,7 +12,7 @@ Auteur : Lekesiz Mucahit
 | 05simplicite.java | Oui | Oui | Oui | Oui |  | 18
 | 48simplicite.java | Oui | Oui | Oui | Oui |  | 18
 | 54simplicite.java | Compile seulement pour RLE
-| Oui | Retour erroné | Ne passe pas | Remarque : Les méthodes pour décompresser un caractère ne sont pas présents, unRLE(string in) et unRLE(string in, int iterations). Donc le code ne compile pas, les tests ne passent pas. Le nom de la méthode avec iterations de RLE n’est pas le même que celui initialement donnée . Sinon le code est commenté.
+| Oui | Retour erroné | Ne passe pas | Les méthodes pour décompresser un caractère ne sont pas présents, unRLE(string in) et unRLE(string in, int iterations). Donc le code ne compile pas, les tests ne passent pas. Le nom de la méthode avec iterations de RLE n’est pas le même que celui initialement donnée . Sinon le code est commenté.
  | 5
 | 26simplicite.py   | Oui | Oui | Oui | Oui |  | 18
 | 65simplicite.py   | Oui | Oui | Oui | Ne passe pas tous les tests | | 12
@@ -42,26 +42,30 @@ Auteur : Lekesiz Mucahit
 Remarque Globale : Parmi les algorithmes évalués, certains ne compilaient pas en raison de l'absence des exceptions AlgoException dans les méthodes, ce qui empêchait le bon fonctionnement du code et le lancement des tests. Pour ces algorithmes, j'ai ajouté les exceptions AlgoException afin de vérifier leur bon fonctionnement, en retirant 5 points à chacun. De plus, pour tous les codes où le nom de la classe n'était pas 'Algo', j'ai enlevé 1 point. Enfin, pour les algorithmes dont le code était commenté et lisible, j'ai ajouté 1 point.
 Pour les algos de la catégorie efficacité je n'ai pas enlevé de point, ils respectaient la consigne sur les méhodes de java.util.
 
+
+== Présentation des outils d’évaluation 
+
 == Classement des Algorithmes
 
 === Classement par Simplicité
 [cols="1,1,1,1", options="header"]
 |===
-|Classement |Algorithme |Note |Commentaire
-|1 |||
-|2 |||
-|3 |||
-|4 |||
-|5 |||
+|Classement |Algorithme |Points positifs |Amélioration
+|1 |26simplicite.py |Bien structuré et lisible, gestion correcte des itérations, noms des méthodes explicites. | Manque de gestion explicite des exceptions, les commentaires peuvent être améliorés pour plus de lisiblité.
+|2 |05simplicite.java |Code simple et fonctionnel | Le manque de commentaire rend le code moins lisible
+|3 |48simplicite.java |Code simple et fonctionnel|
+Quelques répétitions inutiles et manque de commentaires détaillés pour la lisibilité
+|4 |65.somplicite.py |Code structuré| Absence de gestion des exceptions, manque de commentaires
+|5 |54.simplicite.java| Code correct | Quelques inefficacités, absence de gestion des exceptions, manque de commentaires détaillés.
 |===
 
 === Classement par Efficacité
 [cols="1,1,1,1", options="header"]
 |===
-|Classement |Algorithme |Note |Commentaire
-|1 |||
-|2 |||
-|3 |||
+|Classement |Algorithme |Points positifs |Amélioration
+|1 |30efficacite.java ||
+|2 |25efficacite.java ||
+|3 |65efficacite.java ||
 |4 |||
 |5 |||
 |===
@@ -70,7 +74,7 @@ Pour les algos de la catégorie efficacité je n'ai pas enlevé de point, ils re
 [cols="1,1,1,1", options="header"]
 |===
 |Classement |Algorithme |Note |Commentaire
-|1 |||
+|1 |25.sobriete.java||
 |2 |||
 |3 |||
 |4 |||
