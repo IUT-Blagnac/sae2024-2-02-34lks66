@@ -12,7 +12,7 @@ Auteur : Lekesiz Mucahit
 | 05simplicite.java | Oui | Oui | Oui | Oui |  | 18
 | 48simplicite.java | Oui | Oui | Oui | Oui |  | 18
 | 54simplicite.java | Compile seulement pour RLE
-| Oui | Retour erroné | Ne passe pas | Les méthodes pour décompresser un caractère ne sont pas présents, unRLE(string in) et unRLE(string in, int iterations). Donc le code ne compile pas, les tests ne passent pas. Le nom de la méthode avec iterations de RLE n’est pas le même que celui initialement donnée . Sinon le code est commenté.
+| Oui | Retour erroné | Ne passe pas | Les méthodes pour décompresser un caractère ne sont pas présents, unRLE(string in) et unRLE(string in, int iterations). Donc le code ne compile pas, les tests ne passent pas. Le nom de la méthode avec iterations de RLE n’est pas le même que celui initialement donnée . Sinon le code est commenté et lisible.
  | 5
 | 26simplicite.py   | Oui | Oui | Oui | Oui |  | 18
 | 65simplicite.py   | Oui | Oui | Oui | Ne passe pas tous les tests | | 12
