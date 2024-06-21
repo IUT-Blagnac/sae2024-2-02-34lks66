@@ -15,18 +15,18 @@ Auteur : Lekesiz Mucahit
 | Oui | Retour erroné | Ne passe pas | Les méthodes pour décompresser un caractère ne sont pas présents, unRLE(string in) et unRLE(string in, int iterations). Donc le code ne compile pas, les tests ne passent pas. Le nom de la méthode avec iterations de RLE n’est pas le même que celui initialement donnée . Sinon le code est commenté et lisible.
  | 5
 | 26simplicite.py   | Oui | Oui | Oui | Oui |  | 18
-| 65simplicite.py   | Oui | Oui | Oui | Ne passe pas tous les tests | | 12
+| 65simplicite.py   | Oui | Oui | Oui | Ne passe pas tous les tests | L'algorithme ne gère pas le cas où la chaîne de caractère est vide. | 12
 |====
 
 === Evaluation des algorithmes d'efficacité
 |====
 | Algorithme | Compile | Anonymat | Fonctionne | Test | Remarque | Note
 
-| 25efficacite.java | Oui | Oui | Oui | Passe tout les tests sauf deux test de UnRleRecursif | Code commenté. Nom de classe appelé Efficacite | 14
+| 25efficacite.java | Oui | Oui | Oui | Passe tout les tests sauf deux test de UnRleRecursif | Code commenté et lisible. Nom de classe appelé Efficacite | 14
 | 30efficacite.java | Oui | Oui | Oui | Oui | | 18
 | 65efficacite.java | AlgoException | Oui | Fonctionne seulement pour RLE classique, exception levé pour RleRécursif | Ne passe pas | Le nom de la classe est appelé Efficacité. Les Exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif. L’algorithme ne gère pas le cas où la chaîne est vide. L’algorithme compile et fonctionne mais ne passe pas tous les tests initalement fournis. | 7
-| 01efficacite.c   Oui| Oui| Oui| | | | 
-| 34efficacite.c   Oui| Oui| Oui| | | | 
+| 01efficacite.c | Oui| Oui| Oui| --- |Le code est commenté et lisible, il manque les méthodes récursives avec itérations. Le code compile et fonctionne | 14
+| 34efficacite.c | Oui| Oui| Oui| --- | Le code est clair, les commentaires aident à comprendre les parties importantes. Des tests de performance intégrés sont fournis en plus. | 15
 |====
 
 === Evaluation des algorithmes de sobriété
@@ -42,13 +42,9 @@ Auteur : Lekesiz Mucahit
 Remarque Globale : Parmi les algorithmes évalués, certains ne compilaient pas en raison de l'absence des exceptions AlgoException dans les méthodes, ce qui empêchait le bon fonctionnement du code et le lancement des tests. Pour ces algorithmes, j'ai ajouté les exceptions AlgoException afin de vérifier leur bon fonctionnement, en retirant 5 points à chacun. De plus, pour tous les codes où le nom de la classe n'était pas 'Algo', j'ai enlevé 1 point. Enfin, pour les algorithmes dont le code était commenté et lisible, j'ai ajouté 1 point.
 Pour les algos de la catégorie Efficacité je n'ai pas enlevé de point, ils respectaient la consigne sur les méhodes de java.util.
 
-
-== Présentation des outils d’évaluation 
-
 == Classement des Algorithmes
 
 === Classement par Simplicité
-[cols="1,1,1,1", options="header"]
 |===
 |Classement |Algorithme |Points positifs |Amélioration
 |1 |26simplicite.py |Bien structuré, lisible et simple, gestion correcte des itérations | Manque de gestion des exceptions, les commentaires peuvent être améliorés pour plus de lisiblité.
@@ -62,8 +58,8 @@ Quelques répétitions inutiles et manque de commentaires pour plus de lisibilit
 === Classement par Efficacité
 |===
 |Classement |Algorithme |Temps d'exécution | Commentaires
-|1 |01efficacite.py| 0.01ms pour la chaîne de caractère 'abc', 0.015ms pour la chaîne de caractère 'aaabc' |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire.
-|2 |34efficacite.py| Entre 0.020ms et 0.030ms pour la chaîne de caractère 'abc', entre 0.020ms et 0.030ms pour la chaîne de caractère 'aaabc' |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire.
+|1 |01efficacite.py| 0.01ms pour la chaîne de caractère 'abc', 0.015ms pour la chaîne de caractère 'aaabc' |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire. L'algorithme a un temps d'exécution rapide.
+|2 |34efficacite.py| Entre 0.020ms et 0.030ms pour la chaîne de caractère 'abc', entre 0.020ms et 0.030ms pour la chaîne de caractère 'aaabc' |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire. L'algorithme a un temps d'exécution rapide.
 |3 |30efficacite.java |Nb Iteration 5 : 0.16954ms Nb Iteration 15 : 0.7093ms |Implémentation simple des fonctions RLE et unRLE, utilisation efficace de boucles pour la compression et la décompression.
 |4 |25efficacite.java |Nb Iteration 5 : 0.44577ms Nb Iteration 15 : 0.86191ms |Facile à comprendre et à utiliser. Code lisible et commenté. Utilisation de StringBuilder pour améliorer la performance de la concaténation de chaînes, gestion des exceptions pour les itérations négatives.
 |5 |65efficacite.java |Nb Iteration 5 : 0.48957ms Nb Iteration 15 : 2.14028ms |Utilisation de la récursivité pour traiter les itérations multiples. Gestion insuffisante des cas spéciaux comme les chaînes vides ou les itérations négatives, utilisation inefficace de la concaténation de chaînes dans des boucles.
