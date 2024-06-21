@@ -73,7 +73,7 @@ Pour mesurer la performance des algorithmes de la catégorie "Efficacité", j'ai
 Complexité temporelle linéaire 𝑂(𝑛)
 |2 |47sobriete.java | Utilisation de StringBuilder pour une gestion efficace de la mémoire.
 Complexité temporelle linéaire 𝑂(𝑛)
-|3 |65sobriete.java | Utilisation de StringBuilder pour la construction des chaînes.
+|3 |63sobriete.java | Utilisation de StringBuilder pour la construction des chaînes.
 Complexité temporelle linéaire 𝑂(𝑛)
 |4 |12sobriete.java | Concaténation de chaînes répétée dans les boucles, pas très efficace en terme de performances mémoire
 |===
