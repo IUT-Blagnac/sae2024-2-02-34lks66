@@ -25,8 +25,8 @@ Auteur : Lekesiz Mucahit
 | 25efficacite.java | Oui | Oui | Oui | Passe tout les tests sauf deux test de UnRleRecursif | Code commenté. Nom de classe appelé Efficacite | 14
 | 30efficacite.java | Oui | Oui | Oui | Oui | | 18
 | 65efficacite.java | AlgoException | Oui | Fonctionne seulement pour RLE classique, exception levé pour RleRécursif | Ne passe pas | Le nom de la classe est appelé Efficacité. Les Exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif. L’algorithme ne gère pas le cas où la chaîne est vide. L’algorithme compile et fonctionne mais ne passe pas tous les tests initalement fournis. | 7
-| 01efficacite.c   | | | | | | 
-| 34efficacite.c   | | | | | | 
+| 01efficacite.c   Oui| Oui| Oui| | | | 
+| 34efficacite.c   Oui| Oui| Oui| | | | 
 |====
 
 === Evaluation des algorithmes de sobriété
@@ -40,7 +40,7 @@ Auteur : Lekesiz Mucahit
 |====
 
 Remarque Globale : Parmi les algorithmes évalués, certains ne compilaient pas en raison de l'absence des exceptions AlgoException dans les méthodes, ce qui empêchait le bon fonctionnement du code et le lancement des tests. Pour ces algorithmes, j'ai ajouté les exceptions AlgoException afin de vérifier leur bon fonctionnement, en retirant 5 points à chacun. De plus, pour tous les codes où le nom de la classe n'était pas 'Algo', j'ai enlevé 1 point. Enfin, pour les algorithmes dont le code était commenté et lisible, j'ai ajouté 1 point.
-Pour les algos de la catégorie efficacité je n'ai pas enlevé de point, ils respectaient la consigne sur les méhodes de java.util.
+Pour les algos de la catégorie Efficacité je n'ai pas enlevé de point, ils respectaient la consigne sur les méhodes de java.util.
 
 
 == Présentation des outils d’évaluation 
@@ -62,11 +62,11 @@ Quelques répétitions inutiles et manque de commentaires pour plus de lisibilit
 === Classement par Efficacité
 |===
 |Classement |Algorithme |Temps d'exécution | Commentaires
-|1 |30efficacite.java |Nb Iteration 5 : 0.16954ms Nb Iteration 15 : 0.7093ms |Implémentation simple des fonctions RLE et unRLE, utilisation efficace de boucles pour la compression et la décompression.
-|2 |25efficacite.java |Nb Iteration 5 : 0.44577ms Nb Iteration 15 : 0.86191ms |Facile à comprendre et à utiliser. Code lisible et commenté. Utilisation de StringBuilder pour améliorer la performance de la concaténation de chaînes, gestion des exceptions pour les itérations négatives.
-|3 |65efficacite.java |Nb Iteration 5 : 0.48957ms Nb Iteration 15 : 2.14028ms |Utilisation de la récursivité pour traiter les itérations multiples Gestion insuffisante des cas spéciaux comme les chaînes vides ou les itérations négatives, utilisation inefficace de la concaténation de chaînes dans des boucles.
-|4 |01efficacite.py| |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire.
-|5 |34efficacite.py| |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire.
+|1 |01efficacite.py| 0.01ms pour la chaîne de caractère 'abc', 0.015ms pour la chaîne de caractère 'aaabc' |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire.
+|2 |34efficacite.py| Entre 0.020ms et 0.030ms pour la chaîne de caractère 'abc', entre 0.020ms et 0.030ms pour la chaîne de caractère 'aaabc' |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire.
+|3 |30efficacite.java |Nb Iteration 5 : 0.16954ms Nb Iteration 15 : 0.7093ms |Implémentation simple des fonctions RLE et unRLE, utilisation efficace de boucles pour la compression et la décompression.
+|4 |25efficacite.java |Nb Iteration 5 : 0.44577ms Nb Iteration 15 : 0.86191ms |Facile à comprendre et à utiliser. Code lisible et commenté. Utilisation de StringBuilder pour améliorer la performance de la concaténation de chaînes, gestion des exceptions pour les itérations négatives.
+|5 |65efficacite.java |Nb Iteration 5 : 0.48957ms Nb Iteration 15 : 2.14028ms |Utilisation de la récursivité pour traiter les itérations multiples. Gestion insuffisante des cas spéciaux comme les chaînes vides ou les itérations négatives, utilisation inefficace de la concaténation de chaînes dans des boucles.
 |===
 Pour mesurer la performance des algorithmes de la catégorie "Efficacité", j'ai utilisé un programme Java permettant le calcul des temps d'exécution. Le programme mesure le temps d'exécution de l'algorithme RLE récursif en l'appelant 10 fois en prenant en paramètres la chaine de caractère et le nombre d'itérations. Il calcule ensuite la durée totale en nanosecondes et millisecondes, affiche les résultats ou un message d'erreur en cas d'exception. Le classement est basé sur la rapidité de chaque algorithme. Cependant le temps d'exécution n'est pas le seul critère du classement, d'autres critères tels que la facilité d'implémentation et la lisibilité du code sont également pris en compte. 
 
