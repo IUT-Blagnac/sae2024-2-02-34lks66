@@ -75,5 +75,5 @@ Complexité temporelle linéaire 𝑂(𝑛)
 Complexité temporelle linéaire 𝑂(𝑛)
 |3 |65sobriete.java | Utilisation de StringBuilder pour la construction des chaînes.
 Complexité temporelle linéaire 𝑂(𝑛)
-|4 |25sobriete.java | Concaténation de chaînes répétée dans les boucles, pas très efficace en terme de performances mémoire
+|4 |12sobriete.java | Concaténation de chaînes répétée dans les boucles, pas très efficace en terme de performances mémoire
 |===
