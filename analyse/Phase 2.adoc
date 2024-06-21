@@ -68,7 +68,7 @@ Pour mesurer la performance des algorithmes de la catégorie "Efficacité", j'ai
 
 === Classement par Sobriété
 |===
-|Classement |Algorithme |Commentaire
+|Classement |Algorithme |Commentaires
 |1 |25sobriete.java | Utilisation efficace de la mémoire avec des tableaux de caractères.
 Complexité temporelle linéaire 𝑂(𝑛)
 |2 |47sobriete.java | Utilisation de StringBuilder pour une gestion efficace de la mémoire.
