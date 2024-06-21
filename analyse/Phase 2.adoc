@@ -1,0 +1,79 @@
+= S2.02 - Exploration algorithmique d’un problème 
+Auteur : Lekesiz Mucahit
+:toc:
+:toc-title: Sommaire
+
+== Évaluation des Algorithmes
+
+=== Evaluation des algorithmes de simplicité
+|====
+| Algorithme | Compile | Anonymat | Fonctionne | Test | Remarque | Note
+
+| 05simplicite.java | Oui | Oui | Oui | Oui |  | 18
+| 48simplicite.java | Oui | Oui | Oui | Oui |  | 18
+| 54simplicite.java | Compile seulement pour RLE
+| Oui | Retour erroné | Ne passe pas | Les méthodes pour décompresser un caractère ne sont pas présents, unRLE(string in) et unRLE(string in, int iterations). Donc l'algorithme ne compile pas et les tests ne passent pas. Le nom de la méthode avec iterations de RLE n’est pas le même que celui initialement donnée. Sinon le code est commenté et lisible.
+ | 5
+| 26simplicite.py   | Oui | Oui | Oui | Oui |  | 18
+| 65simplicite.py   | Oui | Oui | Oui | Ne passe pas tous les tests. | L'algorithme ne gère pas le cas où la chaîne de caractère est vide. | 12
+|====
+
+=== Evaluation des algorithmes d'efficacité
+|====
+| Algorithme | Compile | Anonymat | Fonctionne | Test | Remarque | Note
+
+| 25efficacite.java | Oui | Oui | Oui | Passe tout les tests sauf deux test de UnRleRecursif | Code commenté et lisible. Nom de classe appelé Efficacite | 14
+| 30efficacite.java | Oui | Oui | Oui | Oui | | 18
+| 65efficacite.java | AlgoException | Oui | Fonctionne seulement pour RLE classique, exception levé pour RleRécursif | Ne passe pas | Le nom de la classe est appelé Efficacité. Les Exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif. L’algorithme ne gère pas le cas où la chaîne est vide. L’algorithme compile et fonctionne mais ne passe pas tous les tests initalement fournis. | 7
+| 01efficacite.c | Oui| Oui| Oui| --- |Le code est commenté et lisible, il manque les méthodes récursives avec itérations. Le code compile et fonctionne correctement.| 14
+| 34efficacite.c | Oui| Oui| Oui| --- |Le code est clair, les commentaires aident à comprendre les parties importantes. Des tests de performance intégrés sont fournis en plus. | 15
+|====
+
+=== Evaluation des algorithmes de sobriété
+|====
+| Algorithme | Compile | Anonymat | Fonctionne | Test | Remarque | Note
+
+| 12sobriete.java | AlgoException | Oui | Oui | Oui | Le nom de la classe est appelé Sobriete. Les exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif.  Mis à part les Exceptions l’algorithme fonctionne, compile et passe tous les tests fournis initialement. | 12
+| 25sobriete.java | Oui | Oui | Oui | Oui | Le nom de la classe est appelé Sobriete. Le code est lisible et commenté. L’algorithme compile, fonctionne et passe tous les tests initialement fournis. | 18
+| 47sobriete.java | AlgoException | Oui | Oui | Oui| Le nom de la classe est appelé Sobriete. Les exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif.  Mis à part les Exceptions l’algorithme fonctionne, compile et passe tous les tests fournis initialement. Le code est lisible et commenté.| 13
+| 63sobriete.java | Oui | Oui | Oui | Oui | | 18
+|====
+
+Remarque Globale : Parmi les algorithmes évalués, certains ne compilaient pas en raison de l'absence des exceptions AlgoException dans les méthodes, ce qui empêchait le bon fonctionnement du code et le lancement des tests. Pour ces algorithmes, j'ai ajouté les exceptions AlgoException afin de vérifier leur bon fonctionnement, en retirant 5 points à chacun. De plus, pour tous les codes où le nom de la classe n'était pas 'Algo', j'ai enlevé 1 point. Enfin, pour les algorithmes dont le code était commenté et lisible, j'ai ajouté 1 point.
+Pour les algos de la catégorie Efficacité je n'ai pas enlevé de point, ils respectaient la consigne sur les méhodes de java.util.
+
+== Classement des Algorithmes
+
+=== Classement par Simplicité
+|===
+|Classement |Algorithme |Points positifs |Amélioration
+|1 |26simplicite.py |Bien structuré, lisible et simple, gestion correcte des itérations | Manque de gestion des exceptions, les commentaires peuvent être améliorés pour plus de lisiblité.
+|2 |05simplicite.java |Code simple et fonctionnel | Le manque de commentaire rend le code moins lisible
+|3 |48simplicite.java |Code simple et fonctionnel|
+Quelques répétitions inutiles et manque de commentaires pour plus de lisibilité
+|4 |65.simplicite.py |Code structuré et simple| Absence de gestion des exceptions, manque de commentaires pour plus de lisibilité
+|5 |54.simplicite.java| Code correct | Quelques inefficacités, absence de gestion des exceptions, manque de commentaires.
+|===
+
+=== Classement par Efficacité
+|===
+|Classement |Algorithme |Temps d'exécution | Commentaires
+|1 |01efficacite.py| 0.01ms pour la chaîne de caractère 'abc', 0.015ms pour la chaîne de caractère 'aaabc' |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire. L'algorithme a un temps d'exécution rapide.
+|2 |34efficacite.py| Entre 0.020ms et 0.030ms pour la chaîne de caractère 'abc', entre 0.020ms et 0.030ms pour la chaîne de caractère 'aaabc' |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire. L'algorithme a un temps d'exécution rapide.
+|3 |30efficacite.java |Nb Iteration 5 : 0.16954ms Nb Iteration 15 : 0.7093ms |Implémentation simple des fonctions RLE et unRLE, utilisation efficace de boucles pour la compression et la décompression.
+|4 |25efficacite.java |Nb Iteration 5 : 0.44577ms Nb Iteration 15 : 0.86191ms |Facile à comprendre et à utiliser. Code lisible et commenté. L'algorithme utilise un StringBuilder pour améliorer la performance de la concaténation de chaînes et gère les exceptions pour les itérations négatives.
+|5 |65efficacite.java |Nb Iteration 5 : 0.48957ms Nb Iteration 15 : 2.14028ms |Utilisation de la récursivité pour traiter les itérations multiples. Le cas des chaînes vides ou des itérations négatives nest pas gérés, l'utilisation de la concaténation de chaînes dans des boucles est inefficace.
+|===
+Pour mesurer la performance des algorithmes de la catégorie "Efficacité", j'ai utilisé un programme Java permettant le calcul des temps d'exécution. Le programme mesure le temps d'exécution de l'algorithme RLE récursif en l'appelant 10 fois en prenant en paramètres la chaine de caractère et le nombre d'itérations. Il calcule ensuite la durée totale en nanosecondes et millisecondes, affiche les résultats ou un message d'erreur en cas d'exception. Le classement est basé sur la rapidité de chaque algorithme. Cependant le temps d'exécution n'est pas le seul critère du classement, d'autres critères tels que la facilité d'implémentation et la lisibilité du code sont également pris en compte. 
+
+=== Classement par Sobriété
+|===
+|Classement |Algorithme |Commentaire
+|1 |25sobriete.java | Utilisation efficace de la mémoire avec des tableaux de caractères.
+Complexité temporelle linéaire 𝑂(𝑛)
+|2 |47sobriete.java | Utilisation de StringBuilder pour une gestion efficace de la mémoire.
+Complexité temporelle linéaire 𝑂(𝑛)
+|3 |65sobriete.java | Utilisation de StringBuilder pour la construction des chaînes.
+Complexité temporelle linéaire 𝑂(𝑛)
+|4 |25sobriete.java | Concaténation de chaînes répétée dans les boucles, pas très efficace en terme de performances mémoire
+|===
