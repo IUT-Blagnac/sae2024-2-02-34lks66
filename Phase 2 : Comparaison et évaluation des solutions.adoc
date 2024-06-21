@@ -24,7 +24,7 @@ Auteur : Lekesiz Mucahit
 
 | 25efficacite.java | Oui | Oui | Oui | Passe tout les tests sauf deux test de UnRleRecursif | Code commenté. Nom de classe appelé Efficacite | 14
 | 30efficacite.java | Oui | Oui | Oui | Oui | | 18
-| 65efficacite.java | AlgoException | Oui | Fonctionne seulement pour RLE classique, exception levé pour RleRécursif | Ne passe pas | Le nom de la classe est Efficacité. Les Exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif. L’algorithme ne gère pas le cas où la chaîne est vide. L’algorithme compile et fonctionne mais ne passe pas tous les tests initalement fournis. | 7
+| 65efficacite.java | AlgoException | Oui | Fonctionne seulement pour RLE classique, exception levé pour RleRécursif | Ne passe pas | Le nom de la classe est appelé Efficacité. Les Exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif. L’algorithme ne gère pas le cas où la chaîne est vide. L’algorithme compile et fonctionne mais ne passe pas tous les tests initalement fournis. | 7
 | 01efficacite.c   | | | | | | 
 | 34efficacite.c   | | | | | | 
 |====
@@ -33,15 +33,17 @@ Auteur : Lekesiz Mucahit
 |====
 | Algorithme | Compile | Anonymat | Fonctionne | Test | Remarque | Note
 
-| 12sobriete.java | Oui | Oui | Oui | Oui | Le nom de la classe est Sobriete. Les exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif.  Mis à part les Exceptions l’algo fonctionne, compile et passe tous les tests fournis initialement. | 12
-| 25sobriete.java | Oui | Oui | Oui | Oui | Le nom de la classe est nommé Sobriete. Le code est lisible et commenté. L’algo compile, fonctionne et passe tous les tests initialement fournis | 18
-| 47sobriete.java | Oui | Oui | Oui | Oui| Le nom de la classe est Sobriete. Les exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif.  Mis à part les Exceptions l’algo fonctionne, compile et passe tous les tests fournis initialement. Le code est lisible et commenté| 13
+| 12sobriete.java | AlgoException | Oui | Oui | Oui | Le nom de la classe est appelé Sobriete. Les exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif.  Mis à part les Exceptions l’algorithme fonctionne, compile et passe tous les tests fournis initialement. | 12
+| 25sobriete.java | Oui | Oui | Oui | Oui | Le nom de la classe est appelé Sobriete. Le code est lisible et commenté. L’algo compile, fonctionne et passe tous les tests initialement fournis | 18
+| 47sobriete.java | AlgoException | Oui | Oui | Oui| Le nom de la classe est appelé Sobriete. Les exceptions AlgoException ne sont pas gérés par les méthodes RLErécursif, UnRLE et UnRLErécursif.  Mis à part les Exceptions l’algo fonctionne, compile et passe tous les tests fournis initialement. Le code est lisible et commenté| 13
 | 63sobriete.java | Oui | Oui | Oui | Oui | | 18
 |====
 
 Remarque Globale : Parmi les algorithmes évalués, certains ne compilaient pas en raison de l'absence des exceptions AlgoException dans les méthodes, ce qui empêchait le bon fonctionnement du code et le lancement des tests. Pour ces algorithmes, j'ai ajouté les exceptions AlgoException afin de vérifier leur bon fonctionnement, en retirant 5 points à chacun. De plus, pour tous les codes où le nom de la classe n'était pas 'Algo', j'ai enlevé 1 point. Enfin, pour les algorithmes dont le code était commenté et lisible, j'ai ajouté 1 point.
 Pour les algos de la catégorie efficacité je n'ai pas enlevé de point, ils respectaient la consigne sur les méhodes de java.util.
- 
+
+
+== Présentation des outils d’évaluation 
 
 == Classement des Algorithmes
 
@@ -49,31 +51,33 @@ Pour les algos de la catégorie efficacité je n'ai pas enlevé de point, ils re
 [cols="1,1,1,1", options="header"]
 |===
 |Classement |Algorithme |Points positifs |Amélioration
-|1 |26simplicite.py |Bien structuré et lisible, gestion correcte des itérations, noms des méthodes explicites. | Manque de gestion explicite des exceptions, les commentaires peuvent être améliorés pour plus de lisiblité.
+|1 |26simplicite.py |Bien structuré, lisible et simple, gestion correcte des itérations | Manque de gestion des exceptions, les commentaires peuvent être améliorés pour plus de lisiblité.
 |2 |05simplicite.java |Code simple et fonctionnel | Le manque de commentaire rend le code moins lisible
 |3 |48simplicite.java |Code simple et fonctionnel|
-Quelques répétitions inutiles et manque de commentaires détaillés pour la lisibilité
-|4 |65.somplicite.py |Code structuré| Absence de gestion des exceptions, manque de commentaires
-|5 |54.simplicite.java| Code correct | Quelques inefficacités, absence de gestion des exceptions, manque de commentaires détaillés.
+Quelques répétitions inutiles et manque de commentaires pour plus de lisibilité
+|4 |65.simplicite.py |Code structuré et simple| Absence de gestion des exceptions, manque de commentaires pour plus de lisibilité
+|5 |54.simplicite.java| Code correct | Quelques inefficacités, absence de gestion des exceptions, manque de commentaires.
 |===
 
 === Classement par Efficacité
-[cols="1,1,1,1", options="header"]
 |===
-|Classement |Algorithme |Points positifs |Amélioration
-|1 |30efficacite.java ||
-|2 |25efficacite.java ||
-|3 |65efficacite.java ||
-|4 |||
-|5 |||
+|Classement |Algorithme |Temps d'exécution | Commentaires
+|1 |30efficacite.java |Nb Iteration 5 : 0.16954ms Nb Iteration 15 : 0.7093ms |Implémentation simple des fonctions RLE et unRLE, utilisation efficace de boucles pour la compression et la décompression.
+|2 |25efficacite.java |Nb Iteration 5 : 0.44577ms Nb Iteration 15 : 0.86191ms |Facile à comprendre et à utiliser. Code lisible et commenté. Utilisation de StringBuilder pour améliorer la performance de la concaténation de chaînes, gestion des exceptions pour les itérations négatives.
+|3 |65efficacite.java |Nb Iteration 5 : 0.48957ms Nb Iteration 15 : 2.14028ms |Utilisation de la récursivité pour traiter les itérations multiples Gestion insuffisante des cas spéciaux comme les chaînes vides ou les itérations négatives, utilisation inefficace de la concaténation de chaînes dans des boucles.
+|4 |01efficacite.py| |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire.
+|5 |34efficacite.py| |Utilisation efficace de malloc et realloc pour la bonne gestion de la mémoire.
 |===
+Pour mesurer la performance des algorithmes de la catégorie "Efficacité", j'ai utilisé un programme Java permettant le calcul des temps d'exécution. Le programme mesure le temps d'exécution de l'algorithme RLE récursif en l'appelant 10 fois en prenant en paramètres la chaine de caractère et le nombre d'itérations. Il calcule ensuite la durée totale en nanosecondes et millisecondes, affiche les résultats ou un message d'erreur en cas d'exception. Le classement est basé sur la rapidité de chaque algorithme. Cependant le temps d'exécution n'est pas le seul critère du classement, d'autres critères tels que la facilité d'implémentation et la lisibilité du code sont également pris en compte. 
 
 === Classement par Sobriété
-[cols="1,1,1,1", options="header"]
 |===
-|Classement |Algorithme |Note |Commentaire
-|1 |25.sobriete.java||
-|2 |||
-|3 |||
-|4 |||
+|Classement |Algorithme |Commentaire
+|1 |25sobriete.java | Utilisation efficace de la mémoire avec des tableaux de caractères.
+Complexité temporelle linéaire 𝑂(𝑛)
+|2 |47sobriete.java | Utilisation de StringBuilder pour une gestion efficace de la mémoire.
+Complexité temporelle linéaire 𝑂(𝑛)
+|3 |65sobriete.java | Utilisation de StringBuilder pour la construction des chaînes.
+Complexité temporelle linéaire 𝑂(𝑛)
+|4 |25sobriete.java | Concaténation de chaînes répétée dans les boucles, pas très efficace en terme de performances mémoire
 |===
